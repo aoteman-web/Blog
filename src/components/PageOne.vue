@@ -26,7 +26,6 @@
         <p></p>
         <BlogArticle></BlogArticle>
         <p></p>
-        <BlogArticle></BlogArticle>
       </div>
       <div class="cont-right">
         <input type="text" value="搜索" onfocus="javascript:if(this.value='搜索')this.value=''"
@@ -37,9 +36,11 @@
       </div>
     </div>
     <div class="footer">
-      <p>网站地图 | 订阅本站 | 联系博主</p>
-      <p>本站总访问量：101848次，本站总访客数:23307人</p>
-      <p>Copyright ©郑超(Charles·Zheng). Theme by BlueLake. Count by busuanzi. Powered by Hexo.</p>
+      <div class="footer-info">
+        <p class="web"><a href="#">网站地图</a> | <a href="#">订阅本站</a> | <a href="#">联系博主</a></p>
+        <p>本站总访问量：101848次，本站总访客数:23307人</p>
+        <p>Copyright <a href="#">©郑超(Charles·Zheng)</a>. Theme by <a href="#">BlueLake</a>. Count by <a href="#">busuanzi</a>. Powered by <a href="#">Hexo</a>.</p>
+      </div>
     </div>
   </div>
 </template>
@@ -113,11 +114,13 @@
     width: 100%;
   }
   .cont-left{
+    /*display: inline-block;*/
     width: 67%;
     float: left;
   }
 
   .cont-right{
+    /*display: inline-block;*/
     width: 33%;
     float: left;
   }
@@ -132,8 +135,12 @@
     outline: none;
   }
   .footer{
+    clear: both;
     width: 100%;
+    height: 300px;
+  }
+  .footer-info{
     text-align: center;
-    background: antiquewhite;
+    padding-top: 100px;
   }
 </style>
