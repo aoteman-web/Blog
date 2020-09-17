@@ -11,7 +11,7 @@
           去掉了Jquery和Fancybox,用原生JS实现站内搜索功能。这个主题只是一个小小的雏形，
           期待您来帮助它成长。
         </p>
-        <a href="#">阅读更多>>></a>
+        <a href="#">阅读更多>></a>
       </div>
     </div>
   </div>
@@ -29,7 +29,8 @@
 <style scoped>
   .blog-article{
     background: white;
-    border: 1px solid rgba(98,129,157,0.9);
+    border: 1px solid rgb(247,222,224);
+    box-shadow: 2px 2px 4px rgb(247,222,224);
     border-radius: 7px;
   }
   .blog-article div{
@@ -37,13 +38,13 @@
     margin: 0 auto;
   }
   .title{
-    color: rgb(76,103,130);
-    border-bottom: 1px solid rgb(98,129,157);
+    color: rgb(230,186,168);
+    border-bottom: 1px solid rgb(230,186,168);
     margin-left: 5px;
   }
   a{
     text-decoration: none;
-    color: rgb(119,151,176);
+    color: rgb(242,198,206);
   }
   a:hover{
     text-decoration: underline;
@@ -59,5 +60,8 @@
   .blog-article div div p{
     margin-top: 2px;
     font-weight: 100;
+  }
+  .blog-article div div a{
+    margin-left: 82%;
   }
 </style>

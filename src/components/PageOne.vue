@@ -26,6 +26,13 @@
         <p></p>
         <BlogArticle></BlogArticle>
         <p></p>
+        <div class="page">
+          <div><a href="#">1</a></div>
+          <div><a href="#">2</a></div>
+          <div><a href="#">3</a></div>
+          <div><a href="#">6</a></div>
+          <div><a href="#">下一页</a></div>
+        </div>
       </div>
       <div class="cont-right">
         <input type="text" value="搜索" onfocus="javascript:if(this.value='搜索')this.value=''"
@@ -39,7 +46,7 @@
       <div class="footer-info">
         <p class="web"><a href="#">网站地图</a> | <a href="#">订阅本站</a> | <a href="#">联系博主</a></p>
         <p>本站总访问量：101848次，本站总访客数:23307人</p>
-        <p>Copyright <a href="#">©郑超(Charles·Zheng)</a>. Theme by <a href="#">BlueLake</a>. Count by <a href="#">busuanzi</a>. Powered by <a href="#">Hexo</a>.</p>
+        <p>Copyright <a href="#">©郑超(Charles·Zheng).</a> Theme by <a href="#">BlueLake.</a> Count by <a href="#">busuanzi.</a> Powered by <a href="#">Hexo.</a></p>
       </div>
     </div>
   </div>
@@ -71,7 +78,7 @@
   .header{
     width: 100%;
     height: 300px;
-    color: rgba(255,255,255,0.8);
+    color: white;
   }
   .header-top{
     height: 100px;
@@ -90,11 +97,11 @@
   }
   .button div:first-child{
     box-shadow: inset 2px 2px 4px rgba(110,40,40,0.1);
-    border-bottom: 1px solid rgba(255,255,255,0.8);
+    border-bottom: 1px solid rgb(255,255,255);
   }
   .button div:hover{
     box-shadow: inset 2px 2px 4px rgba(110,40,40,0.1);
-    border-bottom: 1px solid rgba(255,255,255,0.8);
+    border-bottom: 1px solid rgb(255,255,255);
   }
   a{
     color: rgba(255,255,255,0.8);
@@ -106,8 +113,9 @@
   }
   h1{
     font: bold 42px/1.2 "宋体";
+    color: white;
     white-space: nowrap;
-    text-shadow: 1px 3px 6px #113f6e;
+    text-shadow: 1px 3px 6px rgb(230,188,176);
     margin-bottom: 15px;
   }
   .content{
@@ -118,7 +126,35 @@
     width: 67%;
     float: left;
   }
-
+  .page{
+    text-align: center;
+    width: 100%;
+    height: 100px;
+  }
+  .page div{
+    width: 25px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    display: inline-block;
+    border: 1px solid rgb(247,185,193);
+    margin-left: 10px;
+  }
+  .page div a{
+    color: rgb(247,185,193);
+  }
+  .page div:last-child{
+    width: 60px;
+    height: 34px;
+  }
+  .page div:first-child{
+    box-shadow: inset 1px 1px 2px rgba(110,40,40,0.1);
+    border-bottom: 1px solid rgb(255,255,255);
+  }
+  .page div:hover{
+    box-shadow: inset 1px 1px 2px rgba(110,40,40,0.1);
+    border-bottom: 1px solid rgb(255,255,255);
+  }
   .cont-right{
     /*display: inline-block;*/
     width: 33%;
@@ -130,17 +166,23 @@
     color: rgba(0,0,0,0.5);
     margin-left: 35px;
     padding-left: 15px;
-    border: 1px solid rgba(98,129,157,0.9);
+    border: 1px solid rgb(247,222,224);
+    box-shadow: 2px 2px 4px rgb(247,222,224);
     border-radius: 16px;
     outline: none;
   }
   .footer{
     clear: both;
     width: 100%;
-    height: 300px;
+    height: 200px;
   }
   .footer-info{
     text-align: center;
-    padding-top: 100px;
+    padding-top: 40px;
+    color: rgba(0,0,0,0.7);
+    font-size: 14px;
+  }
+  .footer-info a{
+    color: rgb(247,185,193);
   }
 </style>

@@ -38,7 +38,8 @@
         margin-left: 35px;
         margin-top: 20px;
         background: white;
-        border: 1px solid rgba(98,129,157,0.9);
+        border: 1px solid rgb(247,222,224);
+        box-shadow: 2px 2px 4px rgb(247,222,224);
         border-radius: 7px;
     }
     .information div{
@@ -48,8 +49,8 @@
     .information div div{
         margin: 0;
         font-weight: 200;
-        color: rgb(76,103,130);
-        border-bottom: 1px solid rgb(98,129,157);
+        color: rgb(242,198,206);
+        border-bottom: 1px solid rgba(242,198,206,0.7);
     }
     .information div div h3{
         font-weight: 200;
@@ -62,7 +63,7 @@
     }
     a:hover{
         text-decoration: underline;
-        color: rgb(119,151,176);
+        color: rgb(242,198,206);
     }
     p{
         font-size: 14px;
