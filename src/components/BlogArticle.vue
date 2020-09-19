@@ -1,7 +1,7 @@
 <template>
   <div class="blog-article">
     <div>
-      <div class="title"><h2>BlueLake博客主题的详细配置</h2></div>
+      <div class="title"><a href="#"><h2>BlueLake博客主题的详细配置</h2></a></div>
       <p>【已置顶】 &nbsp;&nbsp;&nbsp;| 2016-12-29 | <a href="#">aoteman博客</a>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">161留言，161参与</a></p>
       <div>
@@ -35,12 +35,17 @@
   }
   .blog-article div{
     width: 92%;
-    margin: 0 auto;
+    margin-left: 5%;
   }
   .title{
-    color: rgb(230,186,168);
     border-bottom: 1px solid rgb(230,186,168);
-    margin-left: 5px;
+  }
+  .title h2{
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .title a{
+    color: rgb(230,186,168);
   }
   a{
     text-decoration: none;
@@ -51,7 +56,7 @@
   }
   .blog-article div div{
     margin-left: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   .blog-article div div h3{
     margin-bottom: 0;
@@ -62,6 +67,11 @@
     font-weight: 100;
   }
   .blog-article div div a{
-    margin-left: 82%;
+    font-size: 14px;
+    margin-left: 81%;
+    padding: 4px 5px;
+  }
+  .blog-article div div a:hover{
+    box-shadow: inset -3px -2px 5px rgba(110,40,40,0.1);
   }
 </style>
