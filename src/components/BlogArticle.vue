@@ -1,9 +1,11 @@
 <template>
   <div class="blog-article">
     <div>
-      <div class="title"><a href="#"><h2>BlueLake博客主题的详细配置</h2></a></div>
+<!--      <div class="title"><a @click="gotolink"><h2>BlueLake博客主题的详细配置</h2></a></div>-->
+      <div class="title"><router-link to="/BlogContent"><h2>BlueLake博客主题的详细配置</h2></router-link></div>
       <p>【已置顶】 &nbsp;&nbsp;&nbsp;| 2016-12-29 | <a href="#">aoteman博客</a>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">161留言，161参与</a></p>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">161留言，161参与</a>
+      </p>
       <div>
         <h3>开始之前</h3>
         <p>BlueLake主题写了有一段时间了，经常会有朋友发消息给我问一些配置的问题，
@@ -13,17 +15,23 @@
         </p>
         <a href="#">阅读更多>></a>
       </div>
+<!--        <router-view></router-view>-->
     </div>
   </div>
 </template>
 
 <script>
-  export default {
-    name: 'blog-article',
-    props: {
-      msg: String
+    export default {
+        name: 'blog-article',
+        props: {
+          msg: String
+        },
+        // methods: {
+        //   gotolink() {
+        //     this.$router.push('/BlogContent')
+        //   }
+        // }
     }
-  }
 </script>
 
 <style scoped>

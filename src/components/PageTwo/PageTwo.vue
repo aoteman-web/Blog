@@ -1,6 +1,6 @@
 <template>
     <div class="page2">
-        <h1>我是第二页</h1>
+        page2
     </div>
 
 </template>

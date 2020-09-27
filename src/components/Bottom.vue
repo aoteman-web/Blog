@@ -25,7 +25,7 @@
     }
     .bottom-info{
         text-align: center;
-        padding-top: 40px;
+        padding-top: 80px;
         color: rgba(0,0,0,0.7);
         font-size: 14px;
     }

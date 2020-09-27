@@ -19,12 +19,19 @@
 </template>
 
 <script>
-// import PageOne from './components/PageOne/PageOne.vue'
 import Top from "./components/Top";
 import Bottom from "./components/Bottom";
 
 export default {
   name: 'App',
+  created() {
+    this.$router.replace({
+      path: './PageOne/'
+    })
+    // if(this.$router.path == './PageTwo/'){
+    //
+    // }
+  },
   components: {
     Bottom,
     Top
@@ -36,7 +43,6 @@ export default {
   body{
     color: #333333;
     width: 100%;
-    /*height: 100%;*/
     background: url("../image/bg.png") no-repeat top center;
     margin: 0;
     padding: 0;
@@ -52,7 +58,7 @@ export default {
   }
   .tab{
     text-align: center;
-    width: 100%;
+    width: 600px;
     height: 100px;
   }
   .tab div{
@@ -63,6 +69,7 @@ export default {
     display: inline-block;
     border: 1px solid rgb(247,185,193);
     margin-left: 10px;
+    box-shadow: 2px 2px 5px rgba(110,40,40,0.1);
   }
   .tab div a{
     color: rgb(247,185,193);
@@ -73,8 +80,9 @@ export default {
     height: 34px;
   }
   .tab div:first-child{
-    box-shadow: inset 1px 1px 2px rgba(110,40,40,0.1);
-    border-bottom: 1px solid rgb(255,255,255);
+    box-shadow: inset 1px 1px 2px rgba(110,40,40,0.1),2px 2px 5px rgba(110,40,40,0.1);
+    border-bottom: 1px solid rgb(247,185,193);
+    background-color: white;
   }
   .tab div:hover{
     box-shadow: inset 1px 1px 2px rgba(110,40,40,0.1);
