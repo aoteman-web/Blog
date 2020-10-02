@@ -1,14 +1,12 @@
 <template>
-    <div class="page2">
-        <h1>我是第三页</h1>
-    </div>
+  <div class="book">
 
+  </div>
 </template>
 
 <script>
-
     export default {
-        name: 'page2',
+        name: 'book',
         props: {
             msg: String
         }

@@ -1,6 +1,5 @@
 <template>
   <div class="blogCont">
-      <Top></Top>
       <div class="content">
           <div class="cont-left">
               <h2>主题</h2>
@@ -113,8 +112,7 @@
 </template>
 
 <script>
-    import Top from '../Top'
-    import Bottom from "../Bottom";
+    import Bottom from "./Bottom";
 
     export default {
         name:'blogCont',
@@ -122,7 +120,6 @@
             msg:String
         },
         components:{
-            Top,
             Bottom
         }
     }

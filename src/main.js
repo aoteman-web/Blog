@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import VueRouter from "vue-router"
 import App from './App.vue'
-import PageOne from "./components/PageOne/PageOne";
-import PageTwo from "./components/PageTwo/PageTwo";
-import PageThree from "./components/PageThree/PageThree";
+import Articles from "@/components/Articles";
+import File from "@/components/File";
+import About from "@/components/About";
+import Book from "@/components/Book"
 
 Vue.config.productionTip = false;
 
@@ -19,31 +20,31 @@ Vue.use(VueRouter);
 // 定义路由
 let routes=[
     {
-      path:'/PageOne',
-      component:PageOne,
-        // children:[     // 嵌套路由
-        //     {
-        //         path:'/',
-        //         name:'BlogCont',
-        //         component:BlogContent
-        //
-        //     }
-        // ]
+        path:'/',
+        redirect:'/articles',
     },
     {
-      path:'/PageTwo',
-      component:PageTwo
+      path:'/articles',
+      component:Articles,
     },
     {
-      path:'/PageThree',
-      component:PageThree
+      path:'/file',
+      component:File,
+    },
+    {
+      path:'/about',
+      component:About,
+    },
+    {
+        path:'/book',
+        component:Book,
     }
 ];
 
 // 创建router实例
 let router = new VueRouter({
-  linkActiveClass: 'active',
-  routes
+    mode: 'history',
+    routes
 });
 
 new Vue({
@@ -51,5 +52,3 @@ new Vue({
   router,
   render: h => h(App)
 }).$mount('#app');
-
-// router.go('/PageOne')
