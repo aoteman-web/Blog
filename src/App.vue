@@ -15,16 +15,17 @@
       </div>
     </div>
     <div class="content">
-      <div class="cont-left"><router-view></router-view></div>
+      <div class="cont-left">
+        <router-view></router-view>
+      </div>
       <div class="cont-right">
         <input type="text" value="搜索" onfocus="javascript:if(this.value='搜索')this.value=''"
                onblur="if(this.value=='')this.value='搜索'">
-        <div class="information">
-          <div>
-            <div><h3>最新文章</h3></div>
-            <p v-for="(blog,index) in blogs" :key="index"><a href="#">{{blog}}</a></p>
-          </div>
-        </div>
+        <latest-blogs></latest-blogs>
+        <sort></sort>
+        <tag></tag>
+        <filing></filing>
+        <interlink></interlink>
       </div>
     </div>
     <Bottom></Bottom>
@@ -33,40 +34,27 @@
 
 <script>
 import Bottom from "./components/Bottom";
+import latestBlogs from "./components/latestBlog";
+import sort from "components/sort";
+import tag from "components/tag"
+import interlink from "components/interlink";
+import Filing from "components/filing";
 
 
 export default {
   name: 'App',
   data() {
     return {
-      articles: {},
-      blogs: [
-        "BlueLake博客主题的详细配置",
-        "自定义HEXO站内搜索Javascript+json",
-        "github博客迁移",
-        "好用的Web包管理器-Bower",
-        "MongoDB学习笔记(2)",
-        "MongoDB学习笔记",
-        "Node.js 多进程(17)",
-        "Node.js RESTful API(16)",
-        "Node.js Express 框架(15)",
-        "Node.js Web 模块(14)"
-      ]
+      articles: {}
     }
   },
-  created() {
-
-
-    // this.$router.replace({
-    //   path: 'Articles'
-    // })
-
-    // if(this.$router.path == './PageTwo/'){
-    //
-    // }
-  },
   components: {
-    Bottom
+    Filing,
+    Bottom,
+    latestBlogs,
+    sort,
+    tag,
+    interlink
   }
 }
 </script>
@@ -131,14 +119,13 @@ export default {
   }
   .content{
     width: 100%;
+    display: flex;
   }
   .cont-left{
-    width: 67%;
-    float: left;
+    flex: 1;
   }
   .cont-right{
-    width: 33%;
-    float: left;
+    flex: 0 0 33%;
   }
   .cont-right input{
     width: 77%;
@@ -150,42 +137,5 @@ export default {
     box-shadow: 2px 2px 4px rgb(247,222,224);
     border-radius: 16px;
     outline: none;
-  }
-  .information{
-    width: 82%;
-    margin-left: 35px;
-    margin-top: 20px;
-    background: white;
-    border: 1px solid rgb(247,222,224);
-    box-shadow: 2px 2px 4px rgb(247,222,224);
-    border-radius: 7px;
-  }
-  .information div{
-    width: 90%;
-    margin: 0 auto;
-  }
-  .information div div{
-    margin: 0;
-    font-weight: 200;
-    color: rgb(242,198,206);
-    border-bottom: 1px solid rgba(242,198,206,0.7);
-  }
-  .information div div h3{
-    font-weight: 200;
-    margin-bottom: 10px;
-  }
-  a{
-    text-decoration: none;
-    color: black;
-    font-weight: 200;
-  }
-  a:hover{
-    text-decoration: underline;
-    color: rgb(242,198,206);
-  }
-  p{
-    font-size: 14px;
-    font-family: "Source Code Pro";
-    margin: 7px 0;
   }
 </style>

@@ -4,53 +4,64 @@
               v-for="(item,index) in articles"
               :key="index"
           >
-            <li>
-              <div class="title" v-if="articles">
-                  <h2>
-                    <router-link to="/BlogContent">{{item.title}}</router-link>
-                  </h2>
-              </div>
-              <p><span v-if="item.state=='top'">【已置顶】&nbsp;&nbsp;&nbsp;|</span>  {{item.date}} | <a href="#">{{item.author}}</a>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">{{item.comment}}留言，{{item.attend}}参与</a>
-              </p>
-              <div>
-                <p>{{item.brief}}</p>
-                <div><a href="#">阅读更多>></a></div>
-              </div>
-            </li>
+              <li>
+                  <div class="title">
+                      <h2>
+                          <router-link :to="`/BlogContent?id=${item.id}`">{{item.title}}</router-link>
+                      </h2>
+                  </div>
+                  <p><span v-if="item.state == 'top'">【已置顶】&nbsp;&nbsp;&nbsp;|</span>  {{item.date}} | <a href="#">{{item.author}}</a>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">{{item.comment}}留言，{{item.attend}}参与</a>
+                  </p>
+                  <div>
+                      <p>{{item.brief}}</p>
+                      <div><a href="#">阅读更多>></a></div>
+                  </div>
+              </li>
           </ul>
-        <div class="tab">
-          <div><a>1</a></div>
-          <div><a>2</a></div>
-          <div><a>3</a></div>
-          <div><a>下一页</a></div>
-        </div>
+      <div class="tab">
+          <button class="btn_turn" v-if="page!=1" @click="switchPage(page-1)">上一页</button>
+          <button v-for="index of pageCount" :key="index" :class="`btn ${index == page?'active':''}`" @click="switchPage(index)">{{index}}</button>
+          <button class="btn_turn" v-if="page!=pageCount" @click="switchPage(page+1)">下一页</button>
       </div>
+  </div>
 </template>
 
 <script>
   import { getArticles } from "@/components/api"
 
-
   export default {
     name: 'articles',
-    props: {
-
-    },
     data(){
-      return {
-        articles: []
-      }
+        return {
+            articles: [],
+            page: 1,
+            pageSize: 4,
+            total: 0,
+            pageCount:1
+        }
     },
     created() {
-      getArticles().then(data => {
-        this.articles = data
-      })
-    }
+        this.getList()
+    },
+      methods:{
+
+          getList(){
+              getArticles({page:this.page}).then(data => {
+                  this.articles = data.list
+                  this.pageSize = data.page_size
+                  this.total = data.total
+                  this.pageCount = Math.ceil(data.total/this.pageSize)
+              })
+          },
+        switchPage(page){
+            this.page=page
+            this.getList()
+        }
+      }
   }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .blog-article{
     background: white;
@@ -109,7 +120,7 @@
     width: 600px;
     height: 100px;
   }
-  .tab div{
+  .tab button{
     width: 25px;
     height: 35px;
     text-align: center;
@@ -118,22 +129,20 @@
     border: 1px solid rgb(247,185,193);
     margin-left: 10px;
     box-shadow: 2px 2px 5px rgba(110,40,40,0.1);
-  }
-  .tab div a{
     color: rgb(247,185,193);
-    text-decoration: none;
+    background-color: rgb(245,226,230);
+    outline: none;
   }
-  .tab div:last-child{
-    width: 60px;
-    height: 34px;
+  .tab .btn_turn{
+      width: 60px;
   }
-  .tab div:first-child{
-    box-shadow: inset 1px 1px 2px rgba(110,40,40,0.1),2px 2px 5px rgba(110,40,40,0.1);
-    border-bottom: 1px solid rgb(247,185,193);
-    background-color: white;
-  }
-  .tab div:hover{
+  .tab button:hover{
     box-shadow: inset 1px 1px 2px rgba(110,40,40,0.1);
     border-bottom: 1px solid rgb(255,255,255);
   }
+    .btn.active{
+        box-shadow: inset 1px 1px 2px rgba(110,40,40,0.1),2px 2px 5px rgba(110,40,40,0.1);
+        border-bottom: 1px solid rgb(247,185,193);
+        background-color: white;
+    }
 </style>

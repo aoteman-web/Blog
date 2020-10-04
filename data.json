@@ -17,7 +17,6 @@
       "title": "BlueLake博客主题的详细配置",
       "brief": "BlueLake主题写了有一段时间了，经常会有朋友发消息给我问一些配置的问题，这篇博文主要也是为了解决这些问题。主题以简洁轻量自居(实则简陋)，去掉了Jquery和Fancybox,用原生JS实现站内搜索功能。这个主题只是一个小小的雏形，期待您来帮助它成长。",
       "date": "2020-10-01",
-      "state": "none",
       "comment": 160,
       "attend": 180,
       "click": 999,
@@ -29,7 +28,6 @@
       "title": "BlueLake博客主题的详细配置",
       "brief": "BlueLake主题写了有一段时间了，经常会有朋友发消息给我问一些配置的问题，这篇博文主要也是为了解决这些问题。主题以简洁轻量自居(实则简陋)，去掉了Jquery和Fancybox,用原生JS实现站内搜索功能。这个主题只是一个小小的雏形，期待您来帮助它成长。",
       "date": "2020-10-01",
-      "state": "none",
       "comment": 160,
       "attend": 180,
       "click": 999,
@@ -41,7 +39,6 @@
       "title": "BlueLake博客主题的详细配置",
       "brief": "BlueLake主题写了有一段时间了，经常会有朋友发消息给我问一些配置的问题，这篇博文主要也是为了解决这些问题。主题以简洁轻量自居(实则简陋)，去掉了Jquery和Fancybox,用原生JS实现站内搜索功能。这个主题只是一个小小的雏形，期待您来帮助它成长。",
       "date": "2020-10-01",
-      "state": "none",
       "comment": 160,
       "attend": 180,
       "click": 999,
@@ -53,7 +50,6 @@
       "title": "BlueLake博客主题的详细配置",
       "brief": "BlueLake主题写了有一段时间了，经常会有朋友发消息给我问一些配置的问题，这篇博文主要也是为了解决这些问题。主题以简洁轻量自居(实则简陋)，去掉了Jquery和Fancybox,用原生JS实现站内搜索功能。这个主题只是一个小小的雏形，期待您来帮助它成长。",
       "date": "2020-10-01",
-      "state": "none",
       "comment": 160,
       "attend": 180,
       "click": 999,
@@ -65,12 +61,54 @@
       "title": "BlueLake博客主题的详细配置",
       "brief": "BlueLake主题写了有一段时间了，经常会有朋友发消息给我问一些配置的问题，这篇博文主要也是为了解决这些问题。主题以简洁轻量自居(实则简陋)，去掉了Jquery和Fancybox,用原生JS实现站内搜索功能。这个主题只是一个小小的雏形，期待您来帮助它成长。",
       "date": "2020-10-01",
-      "state": "none",
       "comment": 160,
       "attend": 180,
       "click": 999,
       "author": "郑超(Charles·Zheng)",
       "content": "<p><span style=\"color: inherit; font-family: inherit; font-size: 24px;\">开始之前</span><br></p>\n    <p><a href=\"https://github.com/chaooo/hexo-theme-BlueLake\" target=\"_blank\"\n            rel=\"noopener\">BlueLake主题</a>写了有一段时间了，经常会有朋友发消息给我问一些配置的问题，这篇博文主要也是为了解决这些问题。主题以简洁轻量自居(实则简陋)，去掉了Jquery和Fancybox,用原生JS实现站内搜索功能。这个主题只是一个小小的雏形，期待您来帮助它成长。\n    </p>\n    <p>在阅读本文之前，假定您已经成功安装了<a href=\"https://hexo.io/zh-cn/\" target=\"_blank\" rel=\"noopener\">Hexo</a>，并使用 Hexo\n        提供的命令创建了一个静态博客。Hexo是一个快速、简洁且高效的博客框架。Hexo基于Node.js ，使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>\n    <p><a id=\"more\"></a></p>\n    <blockquote>\n        <p>需要特别注意的是Hexo有两个<code>_config.yml</code>配置文件，一份位于站点根目录下，主要包含 Hexo\n            站点本身的配置，下文中会称为<strong><code>根_config.yml</code></strong>；另一份位于主题目录下（themes/主题名/_config.yml），这份配置由主题作者提供，主要用于配置主题相关的选项,下文中会称为<strong><code>主题_config.yml</code></strong>。\n        </p>\n    </blockquote>"
     }
+  ],
+  "latestBlog": [
+    "BlueLake博客主题的详细配置",
+    "自定义HEXO站内搜索Javascript+json",
+    "github博客迁移",
+    "好用的Web包管理器-Bower",
+    "MongoDB学习笔记(2)",
+    "MongoDB学习笔记",
+    "Node.js 多进程(17)",
+    "Node.js RESTful API(16)",
+    "Node.js Express 框架(15)",
+    "Node.js Web 模块(14)"
+  ],
+  "sort": [
+    "hexo博客（8）",
+    "nodeJS学习笔记（18）",
+    "前端工具（2）",
+    "数据库（2）",
+    "语言集成查询（1）"
+  ],
+  "tag": [
+    "hexo",
+    "javascript",
+    "linq",
+    "语言集成查询",
+    "node",
+    "mongodb",
+    "bower",
+    "github",
+    "sublime",
+    "BlueLake"
+  ],
+  "filing": [
+    "十二月 2016",
+    "十一月 2016",
+    "八月 2016",
+    "七月 2016",
+    "六月 2016",
+    "五月 2016",
+    "十二月 2015"
+  ],
+  "interlink": [
+    "github"
   ]
 }

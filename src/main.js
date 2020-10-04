@@ -5,6 +5,7 @@ import Articles from "@/components/Articles";
 import File from "@/components/File";
 import About from "@/components/About";
 import Book from "@/components/Book"
+import BlogContent from "./components/BlogContent";
 
 Vue.config.productionTip = false;
 
@@ -24,16 +25,20 @@ let routes=[
         redirect:'/articles',
     },
     {
-      path:'/articles',
-      component:Articles,
+        path:'/articles',
+        component:Articles,
     },
     {
-      path:'/file',
-      component:File,
+        path:'/blogcontent',
+        component:BlogContent,
     },
     {
-      path:'/about',
-      component:About,
+        path:'/file',
+        component:File,
+    },
+    {
+        path:'/about',
+        component:About,
     },
     {
         path:'/book',
@@ -47,6 +52,7 @@ let router = new VueRouter({
     routes
 });
 
+//创建和挂载根实例
 new Vue({
   el:'#app',
   router,
