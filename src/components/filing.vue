@@ -10,7 +10,7 @@
 </template>
 
 <script>
-    import { getFiling } from "./api";
+    import { getFiling } from "api";
 
     export default {
         name:'filing',

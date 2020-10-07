@@ -10,7 +10,7 @@
 </template>
 
 <script>
-    import { getTag } from "./api";
+    import { getTag } from "api";
 
     export default {
         name:'tag',

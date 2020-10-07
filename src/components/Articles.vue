@@ -15,7 +15,7 @@
                   </p>
                   <div>
                       <p>{{item.brief}}</p>
-                      <div><a href="#">阅读更多>></a></div>
+                      <div><router-link :to="`/BlogContent?id=${item.id}`">阅读更多>></router-link></div>
                   </div>
               </li>
           </ul>
@@ -28,7 +28,7 @@
 </template>
 
 <script>
-  import { getArticles } from "@/components/api"
+  import { getArticles } from "api"
 
   export default {
     name: 'articles',
@@ -57,6 +57,7 @@
         switchPage(page){
             this.page=page
             this.getList()
+            window.scrollTo(0,0)
         }
       }
   }

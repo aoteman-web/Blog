@@ -10,7 +10,7 @@
 </template>
 
 <script>
-    import { getInterlink } from "./api";
+    import { getInterlink } from "api";
 
     export default {
         name:'interlink',

@@ -10,7 +10,7 @@
 </template>
 
 <script>
-    import { getLatestBlog } from "./api";
+    import { getLatestBlog } from "api";
 
     export default {
         name:'latest_blog',

@@ -14,7 +14,7 @@ function resolve(dir) {
 }
 
 module.exports = {
-    // 通过api mock数据
+    // 通过api 获取mock数据
     devServer: {
         before(app) {
             app.get('/api/articles', function (req, res) {
@@ -82,5 +82,6 @@ module.exports = {
         config.resolve.alias
             .set('components', resolve('src/components'))
             .set('common', resolve('src/common'))
+            .set('api',resolve('src/api'))
     }
 }

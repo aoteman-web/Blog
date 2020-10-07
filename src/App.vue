@@ -28,6 +28,7 @@
         <interlink></interlink>
       </div>
     </div>
+    <div class="toTop" @click="toTop()"><img src="../image/toTop.png" width="60" height="50"></div>
     <Bottom></Bottom>
   </div>
 </template>
@@ -40,12 +41,28 @@ import tag from "components/tag"
 import interlink from "components/interlink";
 import Filing from "components/filing";
 
-
 export default {
   name: 'App',
   data() {
     return {
       articles: {}
+    }
+  },
+  methods: {
+    toTop(){
+      let timer = -1
+      let scrollTo = document.documentElement.scrollTop || document.body.scrollTop
+      if ( timer === -1 ){
+          timer = setInterval(() => {
+          scrollTo -= 20
+          if( scrollTo <= 0 ) {
+             scrollTo = 0
+             window.clearInterval(timer)
+             timer = -1
+          }
+          window.scrollTo(0,scrollTo)
+        }, 10);
+      }
     }
   },
   components: {
@@ -137,5 +154,12 @@ export default {
     box-shadow: 2px 2px 4px rgb(247,222,224);
     border-radius: 16px;
     outline: none;
+  }
+  .toTop{
+    position: fixed;
+    bottom: 70px;
+    right: 40px;
+    color: rgb(230,186,168);
+    transition: 3s;
   }
 </style>

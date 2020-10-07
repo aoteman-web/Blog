@@ -6,7 +6,7 @@
 </template>
 
 <script>
-    import { getBlogContent } from "./api";
+    import { getBlogContent } from "api";
 
     export default {
         name:'blogcontent',

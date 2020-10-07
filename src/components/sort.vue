@@ -10,7 +10,7 @@
 </template>
 
 <script>
-    import { getSort } from "./api";
+    import { getSort } from "api";
 
     export default {
         name:'sort',
